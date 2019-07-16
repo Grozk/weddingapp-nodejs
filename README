@@ -1,0 +1,5 @@
+Tutorial utilise : https://developer.okta.com/blog/2018/11/15/node-express-typescript#set-up-your-nodejs-project-to-use-typescript
+https://itnext.io/production-ready-node-js-rest-apis-setup-using-typescript-postgresql-and-redis-a9525871407
+
+psql -h localhost -U postgres -d postgres
+
