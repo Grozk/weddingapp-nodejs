@@ -19,9 +19,13 @@ dotenv_1.default.config();
 // port is now available to the Node.js runtime from .env file (dotenv dependency)
 const port = process.env.SERVER_PORT;
 const app = express_1.default();
+// Configure Express to parse incoming JSON data
+app.use(express_1.default.json());
 // Configure Express to use EJS
 app.set("views", path_1.default.join(__dirname, "views"));
 app.set("view engine", "ejs");
+// Configure Express to serve static files in the public folder
+app.use(express_1.default.static(path_1.default.join(__dirname, "public")));
 // Configure routes
 routes.register(app);
 // start the Express server

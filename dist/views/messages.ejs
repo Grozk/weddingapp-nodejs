@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Message List</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+    <% include partials/nav %>
+    <div class="container">
+        <div id="app">
+            <div class="row" id="messageCollection">
+                <h3>Message list</h3>
+                <table v-if="hasMessages">
+                    <thead>
+                        <tr>
+                            <th>Message ID</th>
+                            <th>Message</th>
+                            <th>Number sender</th>
+                            <th>Name sender</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr v-for="message in messagesCollection">
+                            <td>{{ message.message_id }}</td>
+                            <td>{{ message.message }}</td>
+                            <td>{{ message.number_sender }}</td>
+                            <td>{{ message.name_sender }}</td>
+                            <td>
+                                <button id="guitarDelete" @click="confirmDeleteGuitar(guitar.id)" class="btn-small"><i class="material-icons right">delete</i>Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p v-if="noMessages">No messages yet!</p>
+            </div>
+        </div>
+    </div>
+    <script src="js/main.js"></script></body>
+</html>

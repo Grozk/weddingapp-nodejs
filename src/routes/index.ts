@@ -1,4 +1,5 @@
 import * as express from "express";
+import * as api from "./api";
 
 export const register = ( app: express.Application ) => {
 
@@ -9,6 +10,8 @@ export const register = ( app: express.Application ) => {
 
     // define a secure route handler for the guitars page
     app.get( "/guitars", ( req: any, res ) => {
-        res.render( "guitars" );
+        res.render( "messages" );
     } );
+
+    api.register( app );
 };
