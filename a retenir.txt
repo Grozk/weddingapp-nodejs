@@ -1,0 +1,3 @@
+mot de passe local de : postgre44
+
+database postgresql free : api.elephantsql.com connexion avec gmail goul.breizh
