@@ -13,37 +13,36 @@ new Vue( {
     },
     data() {
         return {
-            message_id: "",
-            wedding_id: "",
-            // tslint:disable-next-line: object-literal-sort-keys
-            message: "",
             image: "",
-            number_sender: "",
-            name_sender: "",
-            message_sent: false,
-            isLoading: true
+            isLoading: true,
+            message: "",
+            messageId: "",
+            messageSent: false,
+            nameSender: "",
+            numberSender: "",
+            weddingId: ""
         };
     },
     el: "#app",
     methods: {
         addMessage() {
             const message = {
-                wedding: this.wedding,
-                // tslint:disable-next-line: object-literal-sort-keys
-                message: this.message,
-                image: this.image,
-                number_sender: this.number_sender,
-                name_sender: this.name_sender
+                // wedding: this.wedding,
+                // // tslint:disable-next-line: object-literal-sort-keys
+                // message: this.message,
+                // image: this.image,
+                // number_sender: this.number_sender,
+                // name_sender: this.name_sender
             };
             axios
                 .post( "/api/messages/add", message )
                 .then( () => {
-                    this.wedding = "";
-                    this.message = "";
-                    this.image = "";
-                    this.number_sender = "";
-                    this.name_sender = "";
-                    this.loadMessages();
+                    // this.wedding = "";
+                    // this.message = "";
+                    // this.image = "";
+                    // this.number_sender = "";
+                    // this.name_sender = "";
+                    // this.loadMessages();
                 } )
                 .catch( ( err: any ) => {
                     // tslint:disable-next-line:no-console

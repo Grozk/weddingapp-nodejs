@@ -26,10 +26,10 @@
                     </thead>
                     <tbody>
                         <tr v-for="message in messagesCollection">
-                            <td>{{ message.message_id }}</td>
+                            <td>{{ message.messageId }}</td>
                             <td>{{ message.message }}</td>
-                            <td>{{ message.number_sender }}</td>
-                            <td>{{ message.name_sender }}</td>
+                            <td>{{ message.numberSender }}</td>
+                            <td>{{ message.nameSender }}</td>
                             <td>
                                 <button id="guitarDelete" @click="confirmDeleteGuitar(guitar.id)" class="btn-small"><i class="material-icons right">delete</i>Delete</button>
                             </td>

@@ -1,23 +1,11 @@
 {
-  "type": "postgres",
-  "host": "raja.db.elephantsql.com",
-  "port": 5432,
-  "username": "mnwcgrwe",
-  "password": "FmoJQKSXbArKkKN-qaabLkB4M_a6YQCE",
-  "database": "mnwcgrwe",
-  "synchronize": true,
-  "entities": [
-    "dist/entities/*.js"
-  ],
-  "subscribers": [
-    "src/subscriber/*.js"
-  ],
-  "migrations": [
-    "src/migration/*.js"
-  ],
-  "cli": {
-    "entitiesDir": "src/entity",
-    "migrationsDir": "src/migration",
-    "subscribersDir": "src/subscriber"
-  }
+  "type": "${TYPEORM_CONNECTION}",
+  "host": "${TYPEORM_HOST}",
+  "port": "${TYPEORM_PORT}",
+  "username": "${TYPEORM_USERNAME}",
+  "password": "${TYPEORM_PASSWORD}",
+  "database": "${TYPEORM_DATABASE}",
+  "entities": ["${TYPEORM_ENTITIES}"],
+  "logging": "${TYPEORM_LOGGING}",
+  "synchronize": "${TYPEORM_SYNCHRONIZE}"
 }
