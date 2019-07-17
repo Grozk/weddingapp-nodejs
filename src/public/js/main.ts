@@ -1,5 +1,4 @@
 import axios from "axios";
-import M from "materialize-css";
 import Vue from "vue";
 
 // tslint:disable-next-line no-unused-expression

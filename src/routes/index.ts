@@ -1,7 +1,7 @@
 import * as express from "express";
-import * as api from "./api";
+// import * as api from "./api";
 
-export const register = ( app: express.Application ) => {
+export const registerIndex = ( app: express.Application ) => {
 
     // define a route handler for the default home page
     app.get( "/", ( req: any, res ) => {
@@ -9,9 +9,10 @@ export const register = ( app: express.Application ) => {
     } );
 
     // define a secure route handler for the guitars page
-    app.get( "/guitars", ( req: any, res ) => {
+    app.get( "/messages", ( req: any, res ) => {
         res.render( "messages" );
     } );
 
-    api.register( app );
+    // enregistrement de la partie back-end
+    // api.registerAPI( app );
 };
